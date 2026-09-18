@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#111111">
+<title>The Empress - Today's Specials</title>
+<style>
+html,body{margin:0;min-height:100%;background:#111}
+body{display:flex;align-items:flex-start;justify-content:center}
+main{width:100%;max-width:1100px;margin:auto;padding:12px;box-sizing:border-box}
+img{display:block;width:100%;height:auto;object-fit:contain}
+#msg{display:none;color:white;font:18px system-ui,sans-serif;text-align:center;padding:40px 20px}
+</style>
+</head>
+<body>
+<main>
+<img id="menu" alt="The Empress - Today's Specials">
+<div id="msg">Today's specials are being updated.</div>
+</main>
+<script>
+const img=document.getElementById('menu'), msg=document.getElementById('msg');
+img.onload=()=>{msg.style.display='none';img.style.display='block'};
+img.onerror=()=>{img.style.display='none';msg.style.display='block'};
+img.src='menu.png?v='+Date.now();
+</script>
+</body>
+</html>
