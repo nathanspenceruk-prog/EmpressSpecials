@@ -1,28 +1,24 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#111111">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#17130f">
 <title>The Empress - Today's Specials</title>
 <style>
-html,body{margin:0;min-height:100%;background:#111}
-body{display:flex;align-items:flex-start;justify-content:center}
-main{width:100%;max-width:1100px;margin:auto;padding:12px;box-sizing:border-box}
-img{display:block;width:100%;height:auto;object-fit:contain}
-#msg{display:none;color:white;font:18px system-ui,sans-serif;text-align:center;padding:40px 20px}
-</style>
-</head>
-<body>
-<main>
-<img id="menu" alt="The Empress - Today's Specials">
-<div id="msg">Today's specials are being updated.</div>
-</main>
-<script>
-const img=document.getElementById('menu'), msg=document.getElementById('msg');
-img.onload=()=>{msg.style.display='none';img.style.display='block'};
-img.onerror=()=>{img.style.display='none';msg.style.display='block'};
-img.src='menu.png?v='+Date.now();
-</script>
-</body>
-</html>
+*{box-sizing:border-box}body{margin:0;background:#21170f;color:#f4eee2;font-family:Georgia,"Times New Roman",serif}
+.wrap{max-width:620px;margin:0 auto;padding:16px}.board{background:#171717;border:10px solid #5b341c;outline:3px solid #2b160c;padding:26px 22px 30px;box-shadow:0 8px 30px #0008}
+h1{margin:0 0 24px;text-align:center;font-size:clamp(38px,11vw,72px);line-height:.85;letter-spacing:2px;text-transform:uppercase}
+h1 small{display:block;font-size:.42em;letter-spacing:4px;margin-bottom:8px}.item{display:grid;grid-template-columns:1fr auto;gap:16px;align-items:center;padding:17px 0;border-bottom:2px solid #eee9}
+.name{font-size:clamp(19px,5vw,29px);line-height:1.18;text-transform:uppercase}.name:before{content:"★ ";font-size:.65em}.price{font-size:clamp(23px,6vw,32px);white-space:nowrap}
+.foot{text-align:center;font-size:28px;padding-top:18px;letter-spacing:8px}
+</style></head>
+<body><div class="wrap"><main class="board">
+<h1><small>Today's</small>Specials</h1>
+<div class="item"><div class="name">Cream of Veg Soup</div><div class="price">6.25</div></div>
+<div class="item"><div class="name">Jacket Spuds with Various Toppings</div><div class="price">8.50</div></div>
+<div class="item"><div class="name">Ham, Egg &amp; Chips</div><div class="price">9.95</div></div>
+<div class="item"><div class="name">Chicken Schnitzel with White Wine Creamy Mushroom Sauce, Handcut Chips</div><div class="price">14.95</div></div>
+<div class="item"><div class="name">Beef Stew with Dumplings</div><div class="price">10.95</div></div>
+<div class="item"><div class="name">Posh Fish Finger Butty with Tartare Sauce</div><div class="price">8.95</div></div>
+<div class="foot">❦</div>
+</main></div></body></html>
